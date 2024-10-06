@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
     });
 });
 
-app.post('/execute', async (req, res) => {
+app.post('/check', async (req, res) => {
     const dates: string[] = req.body.dates as string[];
     const result = await checkAvailability(dates, req.body.city, req.body.guests);
     res.json(result);
